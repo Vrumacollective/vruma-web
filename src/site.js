@@ -31,11 +31,10 @@ if (ig) {
   fetch(ig.dataset.feed).then(r => r.json()).then(d => {
     const track = document.getElementById('igtrack');
     (d.posts || []).slice(0, 6).forEach(p => {
-      const s = (p.sizes && (p.sizes.medium || p.sizes.large)) || null;
+      const s = (p.sizes && (p.sizes.large || p.sizes.medium)) || null;
       if (!s) return;
       const a = document.createElement('a');
       a.className = 'igpost'; a.href = p.permalink; a.target = '_blank'; a.rel = 'noopener';
-      a.style.aspectRatio = s.width + '/' + s.height;
       const img = new Image(); img.src = s.mediaUrl; img.alt = ''; img.loading = 'lazy';
       a.appendChild(img);
       if (p.mediaType === 'VIDEO' || p.mediaType === 'CAROUSEL_ALBUM') {
