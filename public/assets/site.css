@@ -180,3 +180,4 @@ body>.phero,.ptitle,.pdesc{display:block}
 .btrack img{height:clamp(260px,30vw,440px);width:auto;aspect-ratio:2/3;object-fit:cover;display:block;background:#111}
 @keyframes bscroll{to{transform:translateX(calc(-50% - 4px))}}
 @media(prefers-reduced-motion:reduce){.btrack{animation:none}.bstrip{overflow-x:auto}}
+.who .tel{display:block;margin-top:10px;color:var(--fg)}.who .tel:hover{opacity:.7}

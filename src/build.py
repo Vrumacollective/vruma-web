@@ -137,8 +137,8 @@ def about():
 <section class="bstrip" aria-label="Behind the scenes"><div class="btrack">{BACK}{BACK}</div></section>
 
 <section class="team">
-  <div class="who"><b>Alvaro Arano</b>{tr("r_alv")}</div>
-  <div class="who"><b>Bruno Donofrio</b>{tr("r_bru")}</div>
+  <div class="who"><b>Alvaro Arano</b>{tr("r_alv")}<a class="tel" href="https://wa.me/5492235853074">+54 9 2235 85-3074</a></div>
+  <div class="who"><b>Bruno Donofrio</b>{tr("r_bru")}<a class="tel" href="https://wa.me/5492235993532">+54 9 2235 99-3532</a></div>
 </section>
 
 <footer class="slimfoot">
@@ -154,8 +154,8 @@ def contact():
   <h1 class="big">{tr("talk")}</h1>
   <div class="cgrid">
     <div><small>Mail</small><a href="mailto:vrumacollective@gmail.com">vrumacollective@gmail.com</a></div>
-    <div><small>Alvaro Arano · {tr("r_alv_s")}</small><a href="https://wa.me/5492235993532">+54 9 2235 99-3532</a></div>
-    <div><small>Bruno Donofrio · {tr("r_bru_s")}</small><a href="https://wa.me/5492235853074">+54 9 2235 85-3074</a></div>
+    <div><small>Alvaro Arano · {tr("r_alv_s")}</small><a href="https://wa.me/5492235853074">+54 9 2235 85-3074</a></div>
+    <div><small>Bruno Donofrio · {tr("r_bru_s")}</small><a href="https://wa.me/5492235993532">+54 9 2235 99-3532</a></div>
     <div><small>{tr("follow")}</small><a href="https://www.instagram.com/vruma.collective/">Instagram</a><a href="https://vimeo.com/user235217933">Vimeo</a><a href="https://www.linkedin.com/company/vrumacollective/">LinkedIn</a></div>
   </div>
 </section>
