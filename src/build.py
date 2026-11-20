@@ -205,6 +205,10 @@ for i, p in enumerate(P):
 write("assets/site.css", (SRC / "site.css").read_text())
 write("assets/site.js", (SRC / "site.js").read_text())
 write("favicon.svg", favicon())
+write("404.html", head("vruma.", T["en"]["meta_desc"], "/404") + f"""
+<section class="about pagetop"><div class="atext"><p>{both("This page doesn’t exist.", "Esta página no existe.")}</p>
+<span class="base"><a href="/">{tr("nav_work")} →</a></span></div></section>
+""" + END)
 urls = ["/", "/about/"] + [f"/work/{p['id']}/" for p in P]
 write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
       + "".join(f"  <url><loc>{SITE}{u}</loc></url>\n" for u in urls) + "</urlset>\n")
