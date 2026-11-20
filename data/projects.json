@@ -1,0 +1,289 @@
+[
+ {
+  "id": "cabala-mundialista",
+  "t": "Cábala mundialista",
+  "c": "Hops x Ubatuba",
+  "y": "2026",
+  "v": "cabala",
+  "k": [
+   "Film"
+  ],
+  "de": "A piece about Argentine football superstitions. Through a jersey, a story about the rituals that come back with every World Cup.",
+  "d": "Una pieza sobre las cábalas del fútbol argentino. A partir de una remera, un relato sobre las supersticiones y los rituales que vuelven en cada Mundial.",
+  "vm": [
+   [
+    "1248792617",
+    "Cábala mundialista"
+   ]
+  ]
+ },
+ {
+  "id": "antares-25",
+  "t": "Antares 25 años",
+  "c": "Antares",
+  "y": "2025",
+  "v": "antares",
+  "k": [
+   "Film"
+  ],
+  "de": "Launch of the 25th-anniversary can. A trilogy of capsules, one for each pillar of the brand.",
+  "d": "Lanzamiento de la lata de 25 años. Una trilogía de cápsulas, una por cada pilar de la marca.",
+  "vm": [
+   [
+    "1055640099",
+    "Fábrica de historias"
+   ],
+   [
+    "1055600209",
+    "Cápsula 2"
+   ],
+   [
+    "1055602829",
+    "Cápsula 3"
+   ]
+  ]
+ },
+ {
+  "id": "the-horse",
+  "t": "The Horse",
+  "c": "Las Titas",
+  "y": "2026",
+  "v": "titas",
+  "k": [
+   "IA"
+  ],
+  "de": "Summer launch campaign made entirely with artificial intelligence.",
+  "d": "Campaña de presentación de verano desarrollada íntegramente con inteligencia artificial.",
+  "vm": [
+   [
+    "1248791899",
+    "The Horse"
+   ],
+   [
+    "1248792038",
+    "The Tower"
+   ],
+   [
+    "1248793667",
+    "The Queen"
+   ]
+  ]
+ },
+ {
+  "id": "wayfarer",
+  "t": "Si es escocés, es Wayfarer",
+  "c": "Wayfarer",
+  "y": "2024",
+  "v": "wayfarer",
+  "k": [
+   "Film"
+  ],
+  "de": "Launch spot for the 2024 winter season.",
+  "d": "Spot de presentación de la temporada invierno 2024.",
+  "vm": [
+   [
+    "1055733802",
+    "Si es escocés, es Wayfarer"
+   ]
+  ]
+ },
+ {
+  "id": "runflex",
+  "t": "Runflex II",
+  "c": "Atomik",
+  "y": "2025",
+  "v": "runflex",
+  "k": [
+   "Film"
+  ],
+  "de": "Launch campaign for the Runflex II running shoe.",
+  "d": "Campaña de lanzamiento de la zapatilla Runflex II.",
+  "vm": [
+   [
+    "1248793051",
+    "Runflex II"
+   ]
+  ]
+ },
+ {
+  "id": "san-lorenzo",
+  "t": "San Lorenzo x Atomik",
+  "c": "Atomik",
+  "y": "2026",
+  "v": "casla",
+  "k": [
+   "IA"
+  ],
+  "spec": true,
+  "de": "2026 jersey launch. Spec.",
+  "d": "Presentación camiseta 2026. Spec.",
+  "vm": [
+   [
+    "1248790857",
+    "San Lorenzo x Atomik"
+   ]
+  ]
+ },
+ {
+  "id": "martha",
+  "t": "Break free from pixels",
+  "c": "Martha",
+  "y": "2024",
+  "v": "martha",
+  "k": [
+   "Film"
+  ],
+  "de": "Summer 2024 campaign. Under the line “dive into the real life algorithm”, it ties the brand to an outdoor lifestyle.",
+  "d": "Campaña de verano 2024. Bajo el lema “dive into the real life algorithm”, une la marca con un estilo de vida outdoor.",
+  "vm": [
+   [
+    "1055726832",
+    "Break free from pixels"
+   ],
+   [
+    "1057551901",
+    "Versión 2"
+   ]
+  ]
+ },
+ {
+  "id": "kids",
+  "t": "Kids x Atomik",
+  "c": "Atomik",
+  "y": "2025",
+  "v": "kids",
+  "k": [
+   "Film",
+   "Foto"
+  ],
+  "de": "Studio campaign for Children’s Day.",
+  "d": "Campaña de estudio para el Día del Niño.",
+  "vm": [
+   [
+    "1114980871",
+    "Kids x Atomik"
+   ],
+   [
+    "1114980353",
+    "Versión 2"
+   ]
+  ]
+ },
+ {
+  "id": "ford-bronco",
+  "t": "Ford Bronco",
+  "c": "Ford",
+  "y": "2026",
+  "v": "bronco",
+  "k": [
+   "IA"
+  ],
+  "spec": true,
+  "de": "Bronco spec.",
+  "d": "Bronco spec.",
+  "vm": [
+   [
+    "1248790795",
+    "Ford Bronco"
+   ]
+  ]
+ },
+ {
+  "id": "hot-sale",
+  "t": "Hot Sale '26",
+  "c": "Atomik",
+  "y": "2026",
+  "v": "hotsale",
+  "k": [
+   "Film"
+  ],
+  "de": "A three-part mini-series that followed Hot Sale in real time: the launch, the discounts and the campaign extension.",
+  "d": "Miniserie de tres piezas que acompañó el Hot Sale en tiempo real: el lanzamiento, los descuentos y la extensión de la campaña.",
+  "vm": [
+   [
+    "1248790345",
+    "Ad 1"
+   ],
+   [
+    "1248789666",
+    "Ad 2 · Crossfit"
+   ],
+   [
+    "1248790135",
+    "Ad 3"
+   ]
+  ]
+ },
+ {
+  "id": "enerlite",
+  "t": "Enerlite",
+  "c": "Atomik",
+  "y": "2025",
+  "v": "enerlite",
+  "k": [
+   "Film",
+   "Foto"
+  ],
+  "de": "Enerlite launch campaign.",
+  "d": "Campaña de presentación Enerlite.",
+  "vm": [
+   [
+    "1248793380",
+    "Enerlite"
+   ]
+  ]
+ },
+ {
+  "id": "trip",
+  "t": "Trip",
+  "c": "Tripstore",
+  "y": "2025",
+  "v": "trip",
+  "k": [
+   "Foto"
+  ],
+  "de": "Studio photo production for a print campaign.",
+  "d": "Producción fotográfica de estudio para campaña gráfica.",
+  "gal": 30
+ },
+ {
+  "id": "atp",
+  "t": "ATP Argentina Open",
+  "c": "IEB+",
+  "y": "2025",
+  "v": "atp",
+  "k": [
+   "Cobertura"
+  ],
+  "de": "Coverage of the ATP 250 at the Buenos Aires Lawn Tennis Club, with multiplatform content and photography.",
+  "d": "Cobertura del ATP 250 en el Buenos Aires Lawn Tennis Club, con contenido multiplataforma y fotografía.",
+  "vm": [
+   [
+    "1056870662",
+    "ATP Argentina Open"
+   ],
+   [
+    "1056884340",
+    "Versión 2"
+   ]
+  ]
+ },
+ {
+  "id": "atomik-yoga",
+  "t": "Atomik Yoga",
+  "c": "Atomik",
+  "y": "2025",
+  "v": "yoga",
+  "k": [
+   "Film"
+  ],
+  "de": "Full production of the launch campaign for the Yoga line.",
+  "d": "Producción integral de la campaña de presentación de la línea Yoga.",
+  "vm": [
+   [
+    "1248794910",
+    "Bra & Leggings"
+   ]
+  ]
+ }
+]
