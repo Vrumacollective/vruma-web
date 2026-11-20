@@ -15,6 +15,8 @@ T = json.loads((DATA / "i18n.json").read_text())
 LOGO = (SRC / "logo.svg.html").read_text().strip()
 SOCIAL = (SRC / "social.html").read_text().strip()
 e = html.escape
+import hashlib
+ASSET_V = hashlib.md5(((SRC / "site.css").read_text() + (SRC / "site.js").read_text()).encode()).hexdigest()[:8]
 
 
 def tr(key, tag="span", cls=""):
@@ -53,7 +55,7 @@ def head(title, desc_en, path, image="/media/hero.jpg"):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v={ASSET_V}">
 <script>try{{var l=localStorage.getItem('vruma-lang');if(l==='es')document.documentElement.lang='es'}}catch(e){{}}</script>
 </head>
 <body>
@@ -76,7 +78,7 @@ FOOT_CONTACT = """<div class="contact">
     </div>
     <div class="legal"><span>vruma collective</span><span>Mar del Plata / Buenos Aires</span></div>"""
 
-END = '<script src="/assets/site.js"></script>\n</body>\n</html>\n'
+END = f'<script src="/assets/site.js?v={ASSET_V}"></script>\n</body>\n</html>\n'
 
 
 def card(p):
