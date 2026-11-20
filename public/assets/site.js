@@ -24,3 +24,25 @@ if (reel) {
   document.getElementById('watch').onclick = () => { pl.classList.add('on'); reel.pause(); full.currentTime = 0; full.play().catch(() => {}); };
   document.getElementById('close').onclick = () => { full.pause(); pl.classList.remove('on'); reel.play().catch(() => {}); };
 }
+
+// Contact: últimas publicaciones de Instagram (feed de Behold, se actualiza una vez por día)
+const ig = document.getElementById('igfeed');
+if (ig) {
+  fetch(ig.dataset.feed).then(r => r.json()).then(d => {
+    const track = document.getElementById('igtrack');
+    (d.posts || []).slice(0, 6).forEach(p => {
+      const s = (p.sizes && (p.sizes.medium || p.sizes.large)) || null;
+      if (!s) return;
+      const a = document.createElement('a');
+      a.className = 'igpost'; a.href = p.permalink; a.target = '_blank'; a.rel = 'noopener';
+      a.style.aspectRatio = s.width + '/' + s.height;
+      const img = new Image(); img.src = s.mediaUrl; img.alt = ''; img.loading = 'lazy';
+      a.appendChild(img);
+      if (p.mediaType === 'VIDEO' || p.mediaType === 'CAROUSEL_ALBUM') {
+        const i = document.createElement('i'); i.className = p.mediaType === 'VIDEO' ? 'ig-play' : 'ig-multi'; a.appendChild(i);
+      }
+      track.appendChild(a);
+    });
+    if (track.children.length) ig.hidden = false;
+  }).catch(() => {});
+}

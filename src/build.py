@@ -154,6 +154,11 @@ def contact():
   </div>
 </section>
 
+<section class="igfeed" id="igfeed" data-feed="https://feeds.behold.so/8WaDBH8X5OloI8sA7TCO" hidden>
+  <a class="ighead" href="https://www.instagram.com/vruma.collective/">Instagram <span>@vruma.collective</span></a>
+  <div class="igtrack" id="igtrack"></div>
+</section>
+
 <footer class="slimfoot">
     <div class="legal"><span>vruma collective</span><span>Mar del Plata / Buenos Aires</span></div>
 </footer>
