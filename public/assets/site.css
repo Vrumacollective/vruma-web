@@ -172,16 +172,3 @@ body>.phero,.ptitle,.pdesc{display:block}
 .cgrid a{display:table;border-bottom:1px solid transparent;transition:border-color .25s}
 .cgrid a:hover{border-color:currentColor}
 
-/* Contact: Instagram */
-.cpage{min-height:auto;padding-bottom:0}
-.igfeed{padding:clamp(70px,9vw,120px) 0 0}
-.ighead{display:inline-flex;gap:12px;align-items:baseline;margin:0 var(--pad) 18px;font-weight:700;font-size:14px;text-transform:uppercase}
-.ighead span{color:var(--mute);text-transform:none;font-weight:400}
-.igtrack{display:flex;gap:4px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--pad);scrollbar-width:none}
-.igtrack::-webkit-scrollbar{display:none}
-.igpost{position:relative;flex:0 0 auto;height:clamp(300px,32vw,460px);aspect-ratio:4/5;scroll-snap-align:start;background:#000;overflow:hidden}
-.igpost img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .3s}
-.igpost:hover img{opacity:.75}
-.igpost i{position:absolute;top:12px;right:12px;width:14px;height:14px}
-.ig-play{border-left:12px solid #E0DFDA;border-top:7px solid transparent;border-bottom:7px solid transparent;width:0!important;height:0!important}
-.ig-multi{border:2px solid #E0DFDA;border-radius:2px;box-shadow:3px -3px 0 -1px #1B1D20,3px -3px 0 1px #E0DFDA}
