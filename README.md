@@ -14,11 +14,10 @@ Sitio web de Vruma Collective — https://vrumacollective.com
 
 1. Editar `data/projects.json` o `data/i18n.json` (o agregar los archivos del proyecto en `public/media/`).
 2. Correr `python3 src/build.py`.
-3. Subir los cambios a `main`. Cloudflare Pages publica solo en un minuto.
+3. Subir los cambios a `main`. Cloudflare publica solo en un minuto.
 
 ## Publicación
 
-Cloudflare Pages, conectado a este repositorio:
-- Framework: ninguno
+Cloudflare (Workers con archivos estáticos), conectado a este repositorio. La configuración está en `wrangler.jsonc`: publica la carpeta `public` tal cual, sin build.
 - Build command: vacío
-- Output directory: `public`
+- Deploy command: `npx wrangler deploy`
