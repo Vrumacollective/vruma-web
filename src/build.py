@@ -59,7 +59,7 @@ def head(title, desc_en, path, image="/media/hero.jpg"):
 <body>
 <header>
   <a href="/" class="logo" aria-label="vruma">{LOGO}</a>
-  <nav><a href="/">{tr("nav_work")}</a><a href="/about/">{tr("nav_about")}</a><a href="/about/#contact">{tr("nav_contact")}</a></nav>
+  <nav><a href="/">{tr("nav_work")}</a><a href="/about/">{tr("nav_about")}</a><a href="/contact/">{tr("nav_contact")}</a></nav>
   <div class="social">
     <button class="tgl" id="langBtn" aria-label="Language"><span class="en">EN</span>/<span class="es">ES</span></button>
     <i class="vsep"></i>
@@ -131,18 +131,30 @@ def about():
 </section>
 
 <section class="team">
-  <div><div class="who"><b>Alvaro Arano</b>{tr("r_alv")}<br><a href="https://wa.me/5492235993532">+54 9 2235 99-3532</a></div></div>
-  <div><div class="who"><b>Bruno Donofrio</b>{tr("r_bru")}<br><a href="https://wa.me/5492235853074">+54 9 2235 85-3074</a></div></div>
+  <div class="who"><b>Alvaro Arano</b>{tr("r_alv")}</div>
+  <div class="who"><b>Bruno Donofrio</b>{tr("r_bru")}</div>
 </section>
 
-<footer id="contact">
-    <div class="big">{tr("talk")}</div>
-    <div class="contact">
-      <div><small>Mail</small><a href="mailto:vrumacollective@gmail.com">vrumacollective@gmail.com</a></div>
-      <div><small>Alvaro Arano</small><a href="https://wa.me/5492235993532">+54 9 2235 99-3532</a></div>
-      <div><small>Bruno Donofrio</small><a href="https://wa.me/5492235853074">+54 9 2235 85-3074</a></div>
-      <div><small>Instagram</small><a href="https://www.instagram.com/vruma.collective/">@vruma.collective</a></div>
-    </div>
+<footer class="slimfoot">
+    <a class="next" href="/contact/">{tr("talk")} →</a>
+    <div class="legal"><span>vruma collective</span><span>Mar del Plata / Buenos Aires</span></div>
+</footer>
+""" + END
+
+
+def contact():
+    return head("Contact — vruma.", T["en"]["meta_desc"], "/contact/") + f"""
+<section class="cpage pagetop">
+  <h1 class="big">{tr("talk")}</h1>
+  <div class="cgrid">
+    <div><small>Mail</small><a href="mailto:vrumacollective@gmail.com">vrumacollective@gmail.com</a></div>
+    <div><small>Alvaro Arano · {tr("r_alv_s")}</small><a href="https://wa.me/5492235993532">+54 9 2235 99-3532</a></div>
+    <div><small>Bruno Donofrio · {tr("r_bru_s")}</small><a href="https://wa.me/5492235853074">+54 9 2235 85-3074</a></div>
+    <div><small>{tr("follow")}</small><a href="https://www.instagram.com/vruma.collective/">Instagram</a><a href="https://vimeo.com/user235217933">Vimeo</a><a href="https://www.linkedin.com/company/vrumacollective/">LinkedIn</a></div>
+  </div>
+</section>
+
+<footer class="slimfoot">
     <div class="legal"><span>vruma collective</span><span>Mar del Plata / Buenos Aires</span></div>
 </footer>
 """ + END
@@ -200,6 +212,7 @@ def write(rel, text):
 
 write("index.html", home())
 write("about/index.html", about())
+write("contact/index.html", contact())
 for i, p in enumerate(P):
     write(f"work/{p['id']}/index.html", project(i))
 write("assets/site.css", (SRC / "site.css").read_text())
@@ -209,7 +222,7 @@ write("404.html", head("vruma.", T["en"]["meta_desc"], "/404") + f"""
 <section class="about pagetop"><div class="atext"><p>{both("This page doesn’t exist.", "Esta página no existe.")}</p>
 <span class="base"><a href="/">{tr("nav_work")} →</a></span></div></section>
 """ + END)
-urls = ["/", "/about/"] + [f"/work/{p['id']}/" for p in P]
+urls = ["/", "/about/", "/contact/"] + [f"/work/{p['id']}/" for p in P]
 write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
       + "".join(f"  <url><loc>{SITE}{u}</loc></url>\n" for u in urls) + "</urlset>\n")
 write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n")
