@@ -122,15 +122,19 @@ def home():
 """ + END
 
 
+BACK = "".join(f'<img src="/media/back/back_{i:02d}.jpg" alt="" width="600" height="900" loading="lazy" decoding="async">' for i in range(1, 17))
+
+
 def about():
-    return head("About — vruma.", T["en"]["meta_desc"], "/about/", "/media/bts.jpg") + f"""
+    return head("About — vruma.", T["en"]["meta_desc"], "/about/", "/media/back/back_01.jpg") + f"""
 <section class="about pagetop">
   <div class="atext">
     {tr("about","p")}
     <span class="base">Mar del Plata / Buenos Aires</span>
   </div>
-  <div class="aimg"><img src="/media/bts.jpg" alt="Vruma on set"></div>
 </section>
+
+<section class="bstrip" aria-label="Behind the scenes"><div class="btrack">{BACK}{BACK}</div></section>
 
 <section class="team">
   <div class="who"><b>Alvaro Arano</b>{tr("r_alv")}</div>

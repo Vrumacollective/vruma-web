@@ -172,3 +172,11 @@ body>.phero,.ptitle,.pdesc{display:block}
 .cgrid a{display:table;border-bottom:1px solid transparent;transition:border-color .25s}
 .cgrid a:hover{border-color:currentColor}
 
+
+/* About: tira de backstage */
+.about{grid-template-columns:minmax(0,60rem)}
+.bstrip{overflow:hidden;margin-top:clamp(60px,8vw,110px)}
+.btrack{display:flex;gap:8px;width:max-content;animation:bscroll 110s linear infinite}
+.btrack img{height:clamp(260px,30vw,440px);width:auto;aspect-ratio:2/3;object-fit:cover;display:block;background:#111}
+@keyframes bscroll{to{transform:translateX(calc(-50% - 4px))}}
+@media(prefers-reduced-motion:reduce){.btrack{animation:none}.bstrip{overflow-x:auto}}
