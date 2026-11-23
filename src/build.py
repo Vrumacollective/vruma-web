@@ -171,7 +171,7 @@ def contact():
     return head("Contact — vruma.", T["en"]["meta_desc"], "/contact/") + f"""
 <section class="cpage pagetop">
   <h1 class="big">{tr("talk")}</h1>
-  <form class="cform" id="cform" data-endpoint="https://formsubmit.co/ajax/1516b0a678dd312c9fdca10eff8d8b94">
+  <form class="cform" id="cform" data-endpoint="https://api.web3forms.com/submit" data-key="51b8f973-8580-45d8-b80f-20eabc7caee2">
     <label><small>{both("Name", "Nombre")}</small><input name="name" required autocomplete="name"></label>
     <label><small>Email</small><input name="email" type="email" required autocomplete="email"></label>
     <label class="msg"><small>{both("Message", "Mensaje")}</small><textarea name="message" rows="4" required></textarea></label>

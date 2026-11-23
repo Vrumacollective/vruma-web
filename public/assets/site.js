@@ -26,7 +26,7 @@ if (reel) {
 }
 
 
-// Contact: formulario → mail (FormSubmit)
+// Contact: formulario → mail (Web3Forms)
 const cf = document.getElementById('cform');
 if (cf) {
   const btn = cf.querySelector('button[type=submit]'), err = cf.querySelector('.err'), sent = cf.querySelector('.sent');
@@ -35,19 +35,14 @@ if (cf) {
     if (cf.elements._honey.value || cf.classList.contains('sending')) return;
     err.hidden = true; btn.disabled = true; cf.classList.add('sending');
     const f = cf.elements;
-    const body = JSON.stringify({name: f.name.value, email: f.email.value, message: f.message.value,
-      _subject: 'Nuevo mensaje desde vrumacollective.com — ' + f.name.value, _template: 'table', _captcha: 'false'});
-    const showSent = () => { if (!cf.classList.contains('done')) { cf.classList.add('done'); sent.hidden = false; } };
-    // FormSubmit tarda en responder: confirmamos a los 2 s y el envío sigue en segundo plano (keepalive)
-    const early = setTimeout(showSent, 2000);
+    const body = JSON.stringify({access_key: cf.dataset.key, name: f.name.value, email: f.email.value, message: f.message.value,
+      subject: 'Nuevo mensaje desde vrumacollective.com — ' + f.name.value, from_name: 'vrumacollective.com'});
     try {
       const r = await fetch(cf.dataset.endpoint, {method: 'POST', keepalive: true, headers: {'Content-Type': 'application/json', 'Accept': 'application/json'}, body});
       const d = await r.json().catch(() => ({}));
-      if (!r.ok || String(d.success) === 'false') throw 0;
-      clearTimeout(early); showSent(); cf.reset();
-    } catch (e) {
-      clearTimeout(early); cf.classList.remove('done'); sent.hidden = true; err.hidden = false;
-    }
+      if (!r.ok || !d.success) throw 0;
+      cf.reset(); cf.classList.add('done'); sent.hidden = false;
+    } catch (e) { err.hidden = false; }
     btn.disabled = false; cf.classList.remove('sending');
   });
   cf.querySelector('.again').addEventListener('click', () => { cf.classList.remove('done'); sent.hidden = true; cf.elements.name.focus(); });
