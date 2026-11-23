@@ -44,6 +44,32 @@
   ]
  },
  {
+  "id": "the-horse",
+  "t": "The Horse",
+  "c": "Las Titas",
+  "y": "2026",
+  "v": "titas",
+  "k": [
+   "IA"
+  ],
+  "de": "Summer launch campaign made entirely with artificial intelligence.",
+  "d": "Campaña de presentación de verano desarrollada íntegramente con inteligencia artificial.",
+  "vm": [
+   [
+    "1248791899",
+    "The Horse"
+   ],
+   [
+    "1248792038",
+    "The Tower"
+   ],
+   [
+    "1248793667",
+    "The Queen"
+   ]
+  ]
+ },
+ {
   "id": "san-lorenzo-2025",
   "t": "San Lorenzo",
   "c": "San Lorenzo de Almagro",
@@ -72,32 +98,6 @@
   ],
   "galdir": "san-lorenzo",
   "galcols": 2
- },
- {
-  "id": "the-horse",
-  "t": "The Horse",
-  "c": "Las Titas",
-  "y": "2026",
-  "v": "titas",
-  "k": [
-   "IA"
-  ],
-  "de": "Summer launch campaign made entirely with artificial intelligence.",
-  "d": "Campaña de presentación de verano desarrollada íntegramente con inteligencia artificial.",
-  "vm": [
-   [
-    "1248791899",
-    "The Horse"
-   ],
-   [
-    "1248792038",
-    "The Tower"
-   ],
-   [
-    "1248793667",
-    "The Queen"
-   ]
-  ]
  },
  {
   "id": "wayfarer",
