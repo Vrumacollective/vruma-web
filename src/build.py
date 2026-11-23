@@ -61,7 +61,7 @@ def head(title, desc_en, path, image="/media/hero.jpg"):
 <body>
 <header>
   <a href="/" class="logo" aria-label="vruma">{LOGO}</a>
-  <nav><a href="/">{tr("nav_work")}</a><a href="/about/">{tr("nav_about")}</a><a href="/contact/">{tr("nav_contact")}</a></nav>
+  <nav><a href="/work/">{tr("nav_work")}</a><a href="/about/">{tr("nav_about")}</a><a href="/contact/">{tr("nav_contact")}</a></nav>
   <div class="social">
     <button class="tgl" id="langBtn" aria-label="Language"><span class="en">EN</span>/<span class="es">ES</span></button>
     <i class="vsep"></i>
@@ -81,10 +81,14 @@ FOOT_CONTACT = """<div class="contact">
 END = f'<script src="/assets/site.js?v={ASSET_V}"></script>\n</body>\n</html>\n'
 
 
+FEATURED = {"runflex", "ford-bronco", "atomik-yoga"}  # los 3 que se ven en el home en celular
+
+
 def card(p):
     meta_en = f'{p["c"]} · {kinds(p,"en")}' + (" · Spec" if p.get("spec") else "")
     meta_es = f'{p["c"]} · {kinds(p,"es")}' + (" · Spec" if p.get("spec") else "")
-    return f"""<a class="card" href="/work/{p['id']}/">
+    feat = " feat" if p["id"] in FEATURED else ""
+    return f"""<a class="card{feat}" href="/work/{p['id']}/">
     <div class="media"><img src="/media/{p['v']}.jpg" alt="" loading="lazy"><video data-src="/media/{p['v']}.mp4" muted loop playsinline preload="none"></video></div>
     <div class="meta"><h3>{e(p['t'])}</h3>{both(meta_en, meta_es, "p")}</div>
   </a>"""
@@ -100,9 +104,10 @@ def home():
   <button class="watch" id="watch"><i class="tri"></i>{tr("watch")}</button>
 </div>
 
-<main class="grid" id="grid">
+<main class="grid homegrid" id="grid">
   {cards}
 </main>
+<a class="allwork" href="/work/">{tr("all_work")} →</a>
 
 <section class="spec">
   <ul class="words">
@@ -115,6 +120,20 @@ def home():
     <div><b>{tr("s_ai")}</b>{tr("d_ai","p")}</div>
   </div>
 </section>
+
+<footer class="homefoot">
+    {FOOT_CONTACT}
+</footer>
+""" + END
+
+
+def work():
+    cards = "\n  ".join(card(p) for p in P)
+    return head("Work — vruma.", T["en"]["meta_desc"], "/work/") + f"""
+<section class="workhead pagetop"><h1 class="big">{tr("nav_work")}</h1></section>
+<main class="grid" id="grid">
+  {cards}
+</main>
 
 <footer class="homefoot">
     {FOOT_CONTACT}
@@ -218,6 +237,7 @@ def write(rel, text):
 
 
 write("index.html", home())
+write("work/index.html", work())
 write("about/index.html", about())
 write("contact/index.html", contact())
 for i, p in enumerate(P):
@@ -227,9 +247,9 @@ write("assets/site.js", (SRC / "site.js").read_text())
 write("favicon.svg", favicon())
 write("404.html", head("vruma.", T["en"]["meta_desc"], "/404") + f"""
 <section class="about pagetop"><div class="atext"><p>{both("This page doesn’t exist.", "Esta página no existe.")}</p>
-<span class="base"><a href="/">{tr("nav_work")} →</a></span></div></section>
+<span class="base"><a href="/work/">{tr("nav_work")} →</a></span></div></section>
 """ + END)
-urls = ["/", "/about/", "/contact/"] + [f"/work/{p['id']}/" for p in P]
+urls = ["/", "/work/", "/about/", "/contact/"] + [f"/work/{p['id']}/" for p in P]
 write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
       + "".join(f"  <url><loc>{SITE}{u}</loc></url>\n" for u in urls) + "</urlset>\n")
 write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n")

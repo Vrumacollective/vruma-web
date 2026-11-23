@@ -29,7 +29,8 @@
   "meta_desc": "Vruma Collective is an independent production company from Argentina. Commercials, campaigns and AI-driven productions for brands and agencies.",
   "r_alv_s": "Creative Director",
   "r_bru_s": "Executive Producer",
-  "follow": "Follow"
+  "follow": "Follow",
+  "all_work": "All work"
  },
  "es": {
   "close": "Cerrar",
@@ -61,6 +62,7 @@
   "meta_desc": "Vruma Collective es una productora audiovisual independiente de Argentina. Comerciales, campañas y producciones con IA para marcas y agencias.",
   "r_alv_s": "Director creativo",
   "r_bru_s": "Productor ejecutivo",
-  "follow": "Seguinos"
+  "follow": "Seguinos",
+  "all_work": "Todos los trabajos"
  }
 }

@@ -16,7 +16,7 @@ header a{pointer-events:auto}
 .social svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;display:block;opacity:.85;transition:opacity .2s}
 .social a:hover svg{opacity:1}
 nav{display:flex;justify-content:space-between;font-weight:700;font-size:14px;text-transform:uppercase}
-@media(max-width:700px){nav a:first-child{display:none}}
+
 
 /* Hero */
 .hero{position:relative;height:100svh;min-height:520px;background:#000;overflow:hidden}
@@ -138,7 +138,7 @@ footer{padding:clamp(90px,12vw,170px) var(--pad) 28px}
 .vsep{width:1px;height:16px;background:currentColor;opacity:.3}
 .watch,.meta,.close{color:#E0DFDA}
 body{transition:background .3s,color .3s}
-@media(max-width:700px){.social{display:flex}.social a{display:none}.vsep{display:none}header{grid-template-columns:auto 1fr auto;gap:16px}nav{justify-content:flex-start;gap:22px;padding-left:14px}}
+@media(max-width:700px){.social{display:flex}.social a{display:none}.vsep{display:none}header{grid-template-columns:auto 1fr auto;gap:16px}nav{justify-content:flex-end;gap:20px;padding-right:6px}}
 
 /* Idioma */
 html[lang=en] [lang=es],html[lang=es] [lang=en]{display:none}
@@ -181,3 +181,12 @@ body>.phero,.ptitle,.pdesc{display:block}
 @keyframes bscroll{to{transform:translateX(calc(-50% - 4px))}}
 @media(prefers-reduced-motion:reduce){.btrack{animation:none}.bstrip{overflow-x:auto}}
 .who .tel{display:block;margin-top:10px;color:var(--fg)}.who .tel:hover{opacity:.7}
+
+/* Home en celular: solo los destacados + link a Work */
+.allwork{display:none}
+@media(max-width:700px){
+  .homegrid .card:not(.feat){display:none}
+  .allwork{display:block;padding:28px var(--pad) 0;font-weight:700;font-size:14px;text-transform:uppercase}
+}
+.workhead{padding-left:var(--pad);padding-right:var(--pad);padding-bottom:clamp(30px,4vw,60px)}
+.workhead .big{margin:0}
