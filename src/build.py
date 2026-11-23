@@ -84,12 +84,19 @@ END = f'<script src="/assets/site.js?v={ASSET_V}"></script>\n</body>\n</html>\n'
 FEATURED = {"runflex", "ford-bronco", "atomik-yoga"}  # los 3 que se ven en el home en celular
 
 
+def med(name):
+    """URL de un archivo de /media con versión según su contenido (evita caché vieja al reemplazarlo)."""
+    f = OUT / "media" / name
+    v = hashlib.md5(f.read_bytes()).hexdigest()[:8] if f.exists() else "0"
+    return f"/media/{name}?v={v}"
+
+
 def card(p):
     meta_en = f'{p["c"]} · {kinds(p,"en")}' + (" · Spec" if p.get("spec") else "")
     meta_es = f'{p["c"]} · {kinds(p,"es")}' + (" · Spec" if p.get("spec") else "")
     feat = " feat" if p["id"] in FEATURED else ""
     return f"""<a class="card{feat}" href="/work/{p['id']}/">
-    <div class="media"><img src="/media/{p['v']}.jpg" alt="" loading="lazy"><video data-src="/media/{p['v']}.mp4" muted loop playsinline preload="none"></video></div>
+    <div class="media"><img src="{med(p['v'] + '.jpg')}" alt="" loading="lazy"><video data-src="{med(p['v'] + '.mp4')}" muted loop playsinline preload="none"></video></div>
     <div class="meta"><h3>{e(p['t'])}</h3>{both(meta_en, meta_es, "p")}</div>
   </a>"""
 
