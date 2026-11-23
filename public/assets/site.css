@@ -202,7 +202,13 @@ body>.phero,.ptitle,.pdesc{display:block}
 .fend{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
 .send{background:none;border:0;color:var(--fg);font:inherit;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.02em;padding:0;cursor:pointer;border-bottom:1px solid transparent}
 .send:hover{border-color:currentColor}
-.cform.sending .send{opacity:.4}
+.send .ing{display:none}
+.cform.sending .send .lbl{display:none}
+.cform.sending .send .ing{display:inline;opacity:.6}
+.cform.done>label,.cform.done>.fend{display:none}
+.sent{grid-column:1/-1}
+.sentbig{margin:0;font-weight:700;font-size:clamp(28px,3vw,44px);letter-spacing:-.02em;line-height:1.1}
+.sentsub{margin:12px 0 26px;color:var(--mute);font-size:clamp(17px,1.4vw,20px)}
 .fstat{margin:0;font-size:15px;color:var(--mute)}
 .fstat.ok{color:var(--fg)}
 @media(max-width:560px){.cform{grid-template-columns:1fr}}

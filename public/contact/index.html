@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=8a319b67">
+<link rel="stylesheet" href="/assets/site.css?v=2462fb53">
 <script>try{var l=localStorage.getItem('vruma-lang');if(l==='es')document.documentElement.lang='es'}catch(e){}</script>
 </head>
 <body>
@@ -41,9 +41,13 @@
     <label class="msg"><small><span lang="en">Message</span><span lang="es">Mensaje</span></small><textarea name="message" rows="4" required></textarea></label>
     <input name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
     <div class="fend">
-      <button type="submit" class="send"><span lang="en">Send</span><span lang="es">Enviar</span> →</button>
-      <p class="fstat ok" hidden><span lang="en">Thanks. We’ll get back to you soon.</span><span lang="es">Gracias. Te respondemos a la brevedad.</span></p>
+      <button type="submit" class="send"><span class="lbl"><span lang="en">Send</span><span lang="es">Enviar</span> →</span><span class="ing"><span lang="en">Sending…</span><span lang="es">Enviando…</span></span></button>
       <p class="fstat err" hidden><span lang="en">Couldn’t send it. Write to us at vrumacollective@gmail.com</span><span lang="es">No se pudo enviar. Escribinos a vrumacollective@gmail.com</span></p>
+    </div>
+    <div class="sent" hidden>
+      <p class="sentbig"><span lang="en">Message sent.</span><span lang="es">Mensaje enviado.</span></p>
+      <p class="sentsub"><span lang="en">Thanks for writing. We’ll get back to you soon.</span><span lang="es">Gracias por escribirnos. Te respondemos a la brevedad.</span></p>
+      <button type="button" class="send again"><span lang="en">Send another</span><span lang="es">Enviar otro</span></button>
     </div>
   </form>
   <div class="cgrid">
@@ -58,6 +62,6 @@
 <footer class="slimfoot">
     <div class="legal"><span>vruma collective</span><span>Mar del Plata / Buenos Aires</span></div>
 </footer>
-<script src="/assets/site.js?v=8a319b67"></script>
+<script src="/assets/site.js?v=2462fb53"></script>
 </body>
 </html>

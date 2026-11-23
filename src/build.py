@@ -177,9 +177,13 @@ def contact():
     <label class="msg"><small>{both("Message", "Mensaje")}</small><textarea name="message" rows="4" required></textarea></label>
     <input name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
     <div class="fend">
-      <button type="submit" class="send">{both("Send", "Enviar")} →</button>
-      <p class="fstat ok" hidden>{both("Thanks. We’ll get back to you soon.", "Gracias. Te respondemos a la brevedad.")}</p>
+      <button type="submit" class="send"><span class="lbl">{both("Send", "Enviar")} →</span><span class="ing">{both("Sending…", "Enviando…")}</span></button>
       <p class="fstat err" hidden>{both("Couldn’t send it. Write to us at vrumacollective@gmail.com", "No se pudo enviar. Escribinos a vrumacollective@gmail.com")}</p>
+    </div>
+    <div class="sent" hidden>
+      <p class="sentbig">{both("Message sent.", "Mensaje enviado.")}</p>
+      <p class="sentsub">{both("Thanks for writing. We’ll get back to you soon.", "Gracias por escribirnos. Te respondemos a la brevedad.")}</p>
+      <button type="button" class="send again">{both("Send another", "Enviar otro")}</button>
     </div>
   </form>
   <div class="cgrid">
