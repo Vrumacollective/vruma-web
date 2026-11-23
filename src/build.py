@@ -218,7 +218,7 @@ def project(i):
     for vid, label in p.get("vm", []):
         lab = both(T["en"].get(label, label), T["es"].get(label, label)) if label in T["en"] else e(label)
         vids += f"""
-  <figure class="embed"><div class="frame"><iframe src="https://player.vimeo.com/video/{vid}?dnt=1&title=0&byline=0&portrait=0" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="{e(label)}"></iframe></div><figcaption>{lab}</figcaption></figure>"""
+  <figure class="embed"><div class="frame"><iframe src="https://player.vimeo.com/video/{vid}?dnt=1&title=0&byline=0&portrait=0&quality=1080p" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="{e(label)}"></iframe></div><figcaption>{lab}</figcaption></figure>"""
     gal = ""
     if p.get("gal"):
         gdir, gpre = p.get("galdir", "trip"), p.get("galpre", "trip")
