@@ -54,9 +54,23 @@
   ],
   "de": "Press kit and web photography for the new jersey launch.",
   "d": "Fotografía para press kit y web de la presentación de la nueva camiseta.",
-  "gal": 14,
+  "gal": [
+   "casla_01.jpg",
+   "casla_17.jpg",
+   "casla_08.jpg",
+   "casla_14.jpg",
+   "casla_24.jpg",
+   "casla_22.jpg",
+   "casla_21.jpg",
+   "casla_26.jpg",
+   "casla_30.jpg",
+   "casla_28.jpg",
+   "casla_27.jpg",
+   "casla_33.jpg",
+   "casla_35.jpg",
+   "casla_31.jpg"
+  ],
   "galdir": "san-lorenzo",
-  "galpre": "sl",
   "galcols": 2
  },
  {
