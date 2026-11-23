@@ -212,3 +212,8 @@ body>.phero,.ptitle,.pdesc{display:block}
 .fstat{margin:0;font-size:15px;color:var(--mute)}
 .fstat.ok{color:var(--fg)}
 @media(max-width:560px){.cform{grid-template-columns:1fr}}
+
+/* Proyecto sin loop arriba: el video arranca más cerca */
+.ptitle.pagetop{padding-top:clamp(110px,12vw,170px)}
+.pdesc{padding-top:clamp(28px,3vw,44px)}
+.embeds{padding-top:clamp(36px,4vw,60px)}

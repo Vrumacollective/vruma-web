@@ -216,8 +216,7 @@ def project(i):
         imgs = "".join(f'<img loading="lazy" src="/media/trip/trip_{n:02d}.jpg" alt="">' for n in range(1, p["gal"] + 1))
         gal = f'<div class="gallery">{imgs}</div>'
     return head(f'{p["t"]} — vruma.', p.get("de", ""), f'/work/{p["id"]}/', f'/media/{p["v"]}.jpg') + f"""
-<div class="phero"><video src="/media/{p['v']}.mp4" poster="/media/{p['v']}.jpg" autoplay muted loop playsinline></video></div>
-<div class="ptitle">
+<div class="ptitle pagetop">
   <h1>{e(p['t'])}</h1>
   <dl class="facts">
     <dt>{tr("client")}</dt><dd>{e(p['c'])}</dd>
