@@ -223,4 +223,6 @@ body>.phero,.ptitle,.pdesc{display:block}
   .hero{height:auto;min-height:0;background:none;overflow:visible;padding-top:78px}
   .hero video{position:relative;inset:auto;display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:#000}
   .watch{position:static;padding:16px var(--pad) 30px}
+  .reellbl{display:block!important;margin:0;padding:22px var(--pad) 14px;font-weight:700;font-size:14px;text-transform:uppercase;color:var(--mute)}
 }
+.reellbl{display:none}

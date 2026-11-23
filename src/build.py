@@ -100,6 +100,7 @@ def home():
 <div class="player" id="player"><button class="close" id="close">{tr("close")}</button><video id="full" controls playsinline preload="none" src="/media/reel720.mp4"></video></div>
 
 <div class="hero">
+  <p class="reellbl">Reel 2025–2026</p>
   <video id="reel" poster="/media/hero.jpg" autoplay muted loop playsinline preload="auto"></video>
   <button class="watch" id="watch"><i class="tri"></i>{tr("watch")}</button>
 </div>
