@@ -190,3 +190,19 @@ body>.phero,.ptitle,.pdesc{display:block}
 }
 .workhead{padding-left:var(--pad);padding-right:var(--pad);padding-bottom:clamp(30px,4vw,60px)}
 .workhead .big{margin:0}
+
+/* Contact: formulario */
+.cform{display:grid;grid-template-columns:1fr 1fr;gap:34px clamp(24px,4vw,60px);margin-top:clamp(48px,6vw,90px);max-width:1100px}
+.cform label{display:block}
+.cform label.msg,.cform .fend{grid-column:1/-1}
+.cform small{display:block;color:var(--mute);font-size:13px;margin-bottom:8px}
+.cform input,.cform textarea{width:100%;background:transparent;border:0;border-bottom:1px solid #3a3c40;color:var(--fg);font:inherit;font-size:clamp(17px,1.4vw,20px);padding:6px 0 10px;border-radius:0;outline:none;transition:border-color .25s;resize:vertical}
+.cform input:focus,.cform textarea:focus{border-color:var(--fg)}
+.cform .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.fend{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.send{background:none;border:0;color:var(--fg);font:inherit;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.02em;padding:0;cursor:pointer;border-bottom:1px solid transparent}
+.send:hover{border-color:currentColor}
+.cform.sending .send{opacity:.4}
+.fstat{margin:0;font-size:15px;color:var(--mute)}
+.fstat.ok{color:var(--fg)}
+@media(max-width:560px){.cform{grid-template-columns:1fr}}

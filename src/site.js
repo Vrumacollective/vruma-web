@@ -25,3 +25,22 @@ if (reel) {
   document.getElementById('close').onclick = () => { full.pause(); pl.classList.remove('on'); reel.play().catch(() => {}); };
 }
 
+
+// Contact: formulario → mail (FormSubmit)
+const cf = document.getElementById('cform');
+if (cf) cf.addEventListener('submit', async ev => {
+  ev.preventDefault();
+  if (cf.elements._honey.value) return;
+  const btn = cf.querySelector('.send'), ok = cf.querySelector('.ok'), err = cf.querySelector('.err');
+  ok.hidden = err.hidden = true; btn.disabled = true; cf.classList.add('sending');
+  const f = cf.elements;
+  try {
+    const r = await fetch(cf.dataset.endpoint, {method: 'POST', headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+      body: JSON.stringify({name: f.name.value, email: f.email.value, message: f.message.value,
+        _subject: 'Nuevo mensaje desde vrumacollective.com — ' + f.name.value, _template: 'table', _captcha: 'false'})});
+    const d = await r.json().catch(() => ({}));
+    if (!r.ok || String(d.success) === 'false') throw 0;
+    cf.reset(); ok.hidden = false;
+  } catch (e) { err.hidden = false; }
+  btn.disabled = false; cf.classList.remove('sending');
+});

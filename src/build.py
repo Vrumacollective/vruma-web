@@ -171,6 +171,17 @@ def contact():
     return head("Contact — vruma.", T["en"]["meta_desc"], "/contact/") + f"""
 <section class="cpage pagetop">
   <h1 class="big">{tr("talk")}</h1>
+  <form class="cform" id="cform" data-endpoint="https://formsubmit.co/ajax/vrumacollective@gmail.com">
+    <label><small>{both("Name", "Nombre")}</small><input name="name" required autocomplete="name"></label>
+    <label><small>Email</small><input name="email" type="email" required autocomplete="email"></label>
+    <label class="msg"><small>{both("Message", "Mensaje")}</small><textarea name="message" rows="4" required></textarea></label>
+    <input name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="fend">
+      <button type="submit" class="send">{both("Send", "Enviar")} →</button>
+      <p class="fstat ok" hidden>{both("Thanks. We’ll get back to you soon.", "Gracias. Te respondemos a la brevedad.")}</p>
+      <p class="fstat err" hidden>{both("Couldn’t send it. Write to us at vrumacollective@gmail.com", "No se pudo enviar. Escribinos a vrumacollective@gmail.com")}</p>
+    </div>
+  </form>
   <div class="cgrid">
     <div><small>Mail</small><a href="mailto:vrumacollective@gmail.com">vrumacollective@gmail.com</a></div>
     <div><small>Alvaro Arano · {tr("r_alv_s")}</small><a href="https://wa.me/5492235853074">+54 9 2235 85-3074</a></div>
