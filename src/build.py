@@ -222,7 +222,7 @@ def project(i):
     gal = ""
     if p.get("gal"):
         gdir, gpre = p.get("galdir", "trip"), p.get("galpre", "trip")
-        imgs = "".join(f'<img loading="lazy" src="/media/{gdir}/{gpre}_{n:02d}.jpg" alt="">' for n in range(1, p["gal"] + 1))
+        imgs = "".join(f'<img loading="lazy" src="{med(f'{gdir}/{gpre}_{n:02d}.jpg')}" alt="">' for n in range(1, p["gal"] + 1))
         cols = " gal2" if p.get("galcols") == 2 else ""
         gal = f'<div class="gallery{cols}">{imgs}</div>'
     return head(f'{p["t"]} — vruma.', p.get("de", ""), f'/work/{p["id"]}/', f'/media/{p["v"]}.jpg') + f"""
