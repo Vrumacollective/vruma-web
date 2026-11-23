@@ -221,8 +221,10 @@ def project(i):
   <figure class="embed"><div class="frame"><iframe src="https://player.vimeo.com/video/{vid}?dnt=1&title=0&byline=0&portrait=0" loading="lazy" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="{e(label)}"></iframe></div><figcaption>{lab}</figcaption></figure>"""
     gal = ""
     if p.get("gal"):
-        imgs = "".join(f'<img loading="lazy" src="/media/trip/trip_{n:02d}.jpg" alt="">' for n in range(1, p["gal"] + 1))
-        gal = f'<div class="gallery">{imgs}</div>'
+        gdir, gpre = p.get("galdir", "trip"), p.get("galpre", "trip")
+        imgs = "".join(f'<img loading="lazy" src="/media/{gdir}/{gpre}_{n:02d}.jpg" alt="">' for n in range(1, p["gal"] + 1))
+        cols = " gal2" if p.get("galcols") == 2 else ""
+        gal = f'<div class="gallery{cols}">{imgs}</div>'
     return head(f'{p["t"]} — vruma.', p.get("de", ""), f'/work/{p["id"]}/', f'/media/{p["v"]}.jpg') + f"""
 <div class="ptitle pagetop">
   <h1>{e(p['t'])}</h1>

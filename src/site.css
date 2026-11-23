@@ -227,3 +227,7 @@ body>.phero,.ptitle,.pdesc{display:block}
 }
 .reellbl{display:none}
 .reellbl i{flex:1;height:0;border-bottom:1px solid currentColor}
+
+/* Galería en 2 columnas (fotos horizontales) */
+.gallery.gal2{grid-template-columns:1fr 1fr}
+@media(max-width:700px){.gallery.gal2{grid-template-columns:1fr}}

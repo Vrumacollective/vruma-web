@@ -44,6 +44,22 @@
   ]
  },
  {
+  "id": "san-lorenzo-2025",
+  "t": "San Lorenzo",
+  "c": "San Lorenzo de Almagro",
+  "y": "2025",
+  "v": "sl25",
+  "k": [
+   "Foto"
+  ],
+  "de": "Press kit and web photography for the new jersey launch.",
+  "d": "Fotografía para press kit y web de la presentación de la nueva camiseta.",
+  "gal": 14,
+  "galdir": "san-lorenzo",
+  "galpre": "sl",
+  "galcols": 2
+ },
+ {
   "id": "the-horse",
   "t": "The Horse",
   "c": "Las Titas",
@@ -102,25 +118,6 @@
    [
     "1248793051",
     "Runflex II"
-   ]
-  ]
- },
- {
-  "id": "san-lorenzo",
-  "t": "San Lorenzo x Atomik",
-  "c": "Atomik",
-  "y": "2026",
-  "v": "casla",
-  "k": [
-   "IA"
-  ],
-  "spec": true,
-  "de": "2026 jersey launch. Spec.",
-  "d": "Presentación camiseta 2026. Spec.",
-  "vm": [
-   [
-    "1248790857",
-    "San Lorenzo x Atomik"
    ]
   ]
  },
@@ -283,6 +280,25 @@
    [
     "1248794910",
     "Bra & Leggings"
+   ]
+  ]
+ },
+ {
+  "id": "san-lorenzo",
+  "t": "San Lorenzo x Atomik",
+  "c": "Atomik",
+  "y": "2026",
+  "v": "casla",
+  "k": [
+   "IA"
+  ],
+  "spec": true,
+  "de": "2026 jersey launch. Spec.",
+  "d": "Presentación camiseta 2026. Spec.",
+  "vm": [
+   [
+    "1248790857",
+    "San Lorenzo x Atomik"
    ]
   ]
  }
