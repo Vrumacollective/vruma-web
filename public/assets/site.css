@@ -231,3 +231,8 @@ body>.phero,.ptitle,.pdesc{display:block}
 /* Galería en 2 columnas (fotos horizontales) */
 .gallery.gal2{grid-template-columns:1fr 1fr}
 @media(max-width:700px){.gallery.gal2{grid-template-columns:1fr}}
+
+/* Galería mixta: horizontales a todo el ancho, verticales de a pares */
+.gallery.galmix{grid-template-columns:1fr 1fr}
+.gallery.galmix img.w{grid-column:1/-1}
+@media(max-width:700px){.gallery.galmix{grid-template-columns:1fr 1fr}}

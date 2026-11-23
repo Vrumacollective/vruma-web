@@ -124,7 +124,8 @@
   "y": "2025",
   "v": "runflex",
   "k": [
-   "Film"
+   "Film",
+   "Foto"
   ],
   "de": "Launch campaign for the Runflex II running shoe.",
   "d": "Campaña de lanzamiento de la zapatilla Runflex II.",
@@ -133,7 +134,22 @@
     "1248793051",
     "Runflex II"
    ]
-  ]
+  ],
+  "gal": [
+   "rf_042.jpg",
+   "rf_039.jpg",
+   "rf_031.jpg",
+   "rf_017.jpg",
+   "rf_010.jpg",
+   "rf_006.jpg",
+   "rf_007.jpg",
+   "rf_073.jpg",
+   "rf_059.jpg",
+   "rf_094.jpg",
+   "rf_090.jpg"
+  ],
+  "galdir": "runflex",
+  "galcols": "mix"
  },
  {
   "id": "martha",

@@ -223,8 +223,16 @@ def project(i):
     if p.get("gal"):
         gdir, gpre = p.get("galdir", "trip"), p.get("galpre", "trip")
         files = p["gal"] if isinstance(p["gal"], list) else [f"{gpre}_{n:02d}.jpg" for n in range(1, p["gal"] + 1)]
-        imgs = "".join(f'<img loading="lazy" src="{med(gdir + "/" + f)}" alt="">' for f in files)
-        cols = " gal2" if p.get("galcols") == 2 else ""
+        def wide(f):
+            try:
+                from PIL import Image
+                w, h = Image.open(OUT / "media" / gdir / f).size
+                return w > h
+            except Exception:
+                return False
+        mix = p.get("galcols") == "mix"
+        imgs = "".join(f'<img loading="lazy" src="{med(gdir + "/" + f)}" alt=""{" class=\"w\"" if mix and wide(f) else ""}>' for f in files)
+        cols = " gal2" if p.get("galcols") == 2 else (" galmix" if mix else "")
         gal = f'<div class="gallery{cols}">{imgs}</div>'
     return head(f'{p["t"]} — vruma.', p.get("de", ""), f'/work/{p["id"]}/', f'/media/{p["v"]}.jpg') + f"""
 <div class="ptitle pagetop">
